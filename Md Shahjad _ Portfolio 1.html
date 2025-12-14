@@ -230,39 +230,6 @@
         <p>&copy; 2025 Md Shahjad Portfolio. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Client-side JavaScript for form submission handling (updated to use class for hiding/showing)
-        const messageDiv = document.getElementById('form-message');
-        
-        // Add a class to hide the message initially, since we can't use inline style
-        messageDiv.classList.add('hidden-message');
-
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            // Prevent the default form submission (which would reload the page)
-            event.preventDefault();
-
-            const form = event.target;
-
-            if (!form.checkValidity()) {
-                return;
-            }
-
-            // Simulate successful submission
-            messageDiv.classList.remove('hidden-message');
-            
-            setTimeout(() => {
-                messageDiv.classList.add('hidden-message');
-            }, 5000);
-
-            form.reset();
-        });
-    </script>
-    
-    <!-- Since CSS is removed, we add a tiny script to simulate "display: none" for the message -->
-    <script>
-        // Note: In a real environment, this class would be in the CSS file.
-        // We use JS here as a workaround since the user requested no CSS.
-        document.head.insertAdjacentHTML('beforeend', '<style>.hidden-message { display: none !important; }</style>');
-    </script>
 </body>
 </html>
+
